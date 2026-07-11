@@ -14,16 +14,16 @@ const BestSeller = () => {
     }, [products])
 
   return (
-    <div className='my-10'>
+    <section className='border-t border-stone-200 py-16 sm:py-20'>
 
-        <div className='py-8 text-center text-3xl'>
+        <div className='pb-10 text-center text-2xl sm:pb-12 sm:text-3xl'>
           <Title text1='BEST' text2='SELLERS' />
-          <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>
+          <p className='mx-auto max-w-xl text-sm leading-6 text-stone-500 sm:text-base'>
             Explore customer favorites designed to bring effortless style and lasting comfort to your wardrobe.
           </p>
         </div>
 
-        <div className='grid grid-cols-2 gap-4 gap-y-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'>
+        <div className='grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 md:gap-x-6 lg:grid-cols-5'>
           {bestSeller.map((item) => (
             <ProductItem
               key={item._id}
@@ -35,7 +35,7 @@ const BestSeller = () => {
           ))}
         </div>
       
-    </div>
+    </section>
   )
 }
 

@@ -7,6 +7,17 @@ a.active hr{
 
 *{
     font-family: Outfit;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fcfcfb;
+  color: #1c1917;
 }
 
 .prata-regular {

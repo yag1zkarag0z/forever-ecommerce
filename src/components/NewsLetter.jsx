@@ -4,18 +4,19 @@ const NewsLetter = () => {
 
     const onSubmitHandler = (event) =>  {
           event.preventDefault();
-    }
+  }
   return (
-    <div className='text-center'>
-      <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off</p>
-      <p className='text-gray-400 mt-3'>
-
+    <section className='bg-stone-900 px-5 py-16 text-center text-white sm:px-10 sm:py-20'>
+      <p className='prata-regular text-2xl sm:text-3xl'>A little something for your inbox.</p>
+      <p className='mx-auto mt-4 max-w-lg text-sm leading-6 text-stone-400'>
+        Subscribe for new arrivals, private offers and receive 20% off your first order.
       </p>
-      <form onSubmit={onSubmitHandler} className='w-full sm:w-1/2 flex items-center gap-3 mx-auto my-6 border pl-3'>
-        <input className='w-full sm:Flex-1 outline-none' type="email" placeholder='Enter your email' required/>
-        <button className='bg-black text-white text-xs px-10 py-4' type='submit'>SUBSCRIBE</button>
+      <form onSubmit={onSubmitHandler} className='mx-auto mt-8 flex w-full max-w-xl border-b border-stone-500'>
+        <label htmlFor='newsletter-email' className='sr-only'>Email address</label>
+        <input id='newsletter-email' className='min-w-0 flex-1 bg-transparent px-1 py-4 text-sm text-white outline-none placeholder:text-stone-500' type='email' placeholder='Email address' required/>
+        <button className='px-3 py-4 text-xs font-semibold tracking-[0.18em] transition-colors hover:text-stone-300 sm:px-6' type='submit'>SUBSCRIBE</button>
       </form>
-    </div>
+    </section>
   )
 }
 

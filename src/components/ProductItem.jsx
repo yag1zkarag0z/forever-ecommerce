@@ -7,15 +7,15 @@ const ProductItem = ({ id, image, name, price }) => {
     const { currency } = useContext(ShopContext)
  
     return (
-    <div>
-      <Link className='text-gray-700 cursor-pointer' to={`/product/${id}`}>
-      <div className='overflow-hidden'>
-        <img className='transition ease-in-out hover:scale-110' src={image[0]} alt={name} />
+    <article className='group'>
+      <Link className='cursor-pointer text-stone-700' to={`/product/${id}`}>
+      <div className='aspect-[3/4] overflow-hidden bg-stone-100'>
+        <img className='h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]' src={image[0]} alt={name} />
       </div>
-      <p className='pt-3 pb-1 text-sm'>{name}</p>
-      <p className='text-sm font-medium'>{currency}{price}</p>
+      <p className='pb-1 pt-4 text-sm leading-5 text-stone-700 transition-colors group-hover:text-black'>{name}</p>
+      <p className='text-sm font-semibold tracking-wide text-stone-950'>{currency}{price}</p>
       </Link>
-    </div>
+    </article>
   )
 }
 

@@ -13,15 +13,15 @@ const LatestCollection = () => {
   }, [products])
 
   return (
-    <>
-      <div className='py-8 text-center text-3xl'>
+    <section className='py-16 sm:py-20'>
+      <div className='pb-10 text-center text-2xl sm:pb-12 sm:text-3xl'>
         <Title text1='LATEST' text2='COLLECTION' />
-        <p className='m-auto w-3/4 text-xs text-gray-600 sm:text-sm md:text-base'>
+        <p className='mx-auto max-w-xl text-sm leading-6 text-stone-500 sm:text-base'>
           Discover our newest arrivals, carefully selected to refresh your everyday style.
         </p>
       </div>
 
-      <div className='grid grid-cols-2 gap-4 gap-y-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'>
+      <div className='grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 md:gap-x-6 lg:grid-cols-5'>
         {latestProducts.map((item) => (
           <ProductItem
             key={item._id}
@@ -32,7 +32,7 @@ const LatestCollection = () => {
           />
         ))}
       </div>
-    </>
+    </section>
   )
 }
 
